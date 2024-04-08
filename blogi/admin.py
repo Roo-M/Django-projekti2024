@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from blogi.models import Postaus
+
+
+@admin.register(Postaus)
+class PostausAdmin(admin.ModelAdmin):
+    list_display = ["otsikko", "kirjoittaja", "luotu", "julkaisuaika"]
+    
