@@ -7,5 +7,5 @@ class PostausListaNäkymä(ListView):
     model = Postaus
 
 
-class PostausNäytäNäkymä(DetailView)
+class PostausNäytäNäkymä(DetailView):
     model = Postaus

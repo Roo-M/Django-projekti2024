@@ -1,0 +1,21 @@
+{% extends 'base_with_nav.html' %}
+
+{% block title %}Blogi{% endblock %}
+
+{% block navigation_items %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'postaus-lista' %}">Postaukset</a>
+</li>
+{{block.super}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{% block otsikko %}Blogi{% endblock %}</h1>
+
+    {% block sisältö %}
+    {% endblock %}
+</div>
+
+{% endblock %}

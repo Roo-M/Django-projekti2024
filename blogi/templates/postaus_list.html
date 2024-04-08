@@ -1,8 +1,11 @@
-Postaukset listataan tässä
+{% extends 'blogi/base.html' %}
 
+{% block sisältö %}
+<ul>
 {% for postaus in postaus_list %}
 <li>
     <a href="{% url 'postaus-näytä' postaus.pk %}">{{postaus}}</a>
 </li>
 {% endfor %}
 </ul>
+{% endblock %}

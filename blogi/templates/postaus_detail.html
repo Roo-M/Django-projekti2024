@@ -1,5 +1,11 @@
-<h1>{{postaus.otsikko}}</h1>
+{% extends 'blogi/base.html' %}
 
-<p>
-{{postaus.teksti}}
-</p>
+{% load markdown_extras %}
+
+{% block otsikko %}
+{{postaus.otsikko}}
+{% endblock %}
+
+{% block sisältö %}
+{{postaus.teksti | markdown | safe}}
+{% endblock %}

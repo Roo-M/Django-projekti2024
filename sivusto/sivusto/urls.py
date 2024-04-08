@@ -22,4 +22,5 @@ import blogi.urls
 urlpatterns = [
     path("", include(blogi.urls)),
     path('admin/', admin.site.urls),
+    path("markdownx/", include(markdownx.urls)),
 ]

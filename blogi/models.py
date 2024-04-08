@@ -1,11 +1,12 @@
 from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from markdownx.models import MarkdownxField
 
 # Create your models here.
 class Postaus(models.Model):
     otsikko = models.CharField(max_length=200)
-    teksti = models.TextField()
+    teksti = MarkdownxField()
 
     # Vaihtoehto 1: Älä anna poistaa käyttäjää, jolla on blogipostauksia
     kirjoittaja = models.ForeignKey(
